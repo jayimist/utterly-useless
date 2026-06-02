@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+echo "Cloning new MiniJoyse..."
+sudo cp ~/Code/MiniJoyse/minijoyse /bin/minijoyse.new
+echo "sudo update-mjy: 'cp ~/Code/MiniJoyse/minijoyse /bin/minijoyse.new'"
+echo "Replacing old MiniJoyse..."
+sudo mv /bin/minijoyse.new /bin/minijoyse
+echo "sudo update-mjy: 'mv /bin/minijoyse.new /bin/minijoyse'"
+echo "Updated MiniJoyse!"

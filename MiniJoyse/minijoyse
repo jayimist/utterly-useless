@@ -1,11 +1,11 @@
 #!/home/jay/Python/bin/python3
 # MiniJoyse Langauge
-import sys, time
+import sys, time, subprocess
 from pathlib import Path
 from rich.text import Text
 from rich import print as rich_print
 
-MINIJOYSE_VERSION = "1.0.0"
+MINIJOYSE_VERSION = "1.0.1"
 
 
 
@@ -98,13 +98,15 @@ cmd = sys.argv[0]
 args = sys.argv[1:]
 
 if not args:
-	print(f"𝓜𝓲𝓷𝓲𝓙𝓸𝔂𝓼𝓮 - v{MINIJOYSE_VERSION}\nMiniJoyse is a small programming language by Jay\nCommands:\n    version - Shows the MiniJoyse version.\n\nType 'quit' or 'exit' to quit the loop.")
+	print(f"𝓜𝓲𝓷𝓲𝓙𝓸𝔂𝓼𝓮 - v{MINIJOYSE_VERSION}\nMiniJoyse is a small programming language by Jay\nCommands:\n    version - Shows the MiniJoyse version.\n    update - Updates MiniJoyse to the latest version.\n\nType 'quit' or 'exit' to quit the loop.")
 
 	while True:
 		line = input(">>> ")
 		MiniJoyse.run(line)
 elif args[0] == "version":
 	print(f"𝓜𝓲𝓷𝓲𝓙𝓸𝔂𝓼𝓮 - v{MINIJOYSE_VERSION} (MiniJoyse)")
+elif args[0] == "update":
+	subprocess.run(["update-mjy"])
 elif args[0]:
 	file = Path(args[0])
 	
