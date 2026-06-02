@@ -1,0 +1,7 @@
+READ ME...
+
+For this to work install the packages (Yes built-in packages are included):
+sys
+time
+pathlib
+rich
